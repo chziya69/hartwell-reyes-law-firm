@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hartwell & Reyes — Business & Immigration Law</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0f1e33;--navy2:#162a46;--gold:#b89656;--ivory:#faf8f3;--ink:#1b2433;--muted:#6b7385}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.65}
+  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .top{background:var(--navy);color:#aab4c6;font-size:13px}
+  .top .wrap{display:flex;justify-content:space-between;padding:10px 28px}
+  .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-120px;top:-60px;width:640px;height:140%;background:linear-gradient(160deg,var(--navy2),#0a1626);transform:skewX(-12deg);border-left:1px solid rgba(184,150,86,.3)}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;position:relative;z-index:2;border-bottom:1px solid rgba(255,255,255,.08)}
+  .logo{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:700;letter-spacing:.02em}
+  .logo small{display:block;font-family:Manrope;font-size:10px;letter-spacing:.32em;color:var(--gold);font-weight:600;margin-top:-4px}
+  nav ul{display:flex;gap:36px;list-style:none;font-size:14px;font-weight:500;color:#cfd6e3}
+  .btn{display:inline-block;padding:15px 28px;font-weight:600;font-size:14px;letter-spacing:.04em;border-radius:2px}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-out{border:1px solid rgba(255,255,255,.35);color:#fff}
+  .hgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding:90px 0 110px;position:relative;z-index:2}
+  .eyebrow{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:14px}
+  .eyebrow:before{content:"";width:40px;height:1px;background:var(--gold)}
+  .hero h1{font-size:72px;margin-bottom:26px}
+  .hero h1 em{color:var(--gold);font-style:italic}
+  .hero p{color:#b9c2d3;font-size:18px;max-width:520px;margin-bottom:38px}
+  .cta{display:flex;gap:14px}
+  .form{background:#fff;color:var(--ink);padding:38px;border-top:4px solid var(--gold);box-shadow:0 30px 70px -20px rgba(0,0,0,.5)}
+  .form h3{font-size:30px;margin-bottom:6px}
+  .form p{color:var(--muted);font-size:14px;margin-bottom:22px}
+  .field{border:1px solid #dfe2e8;padding:14px 16px;margin-bottom:12px;font-size:14px;color:#9aa1af;background:#fbfbfc}
+  .form .btn{width:100%;text-align:center;background:var(--navy);color:#fff;margin-top:6px}
+  .trust{background:#fff;border-bottom:1px solid #ece8dd}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .trust div{padding:34px 24px;border-right:1px solid #ece8dd;text-align:center}
+  .trust div:last-child{border:none}
+  .trust b{display:block;font-family:"Cormorant Garamond",serif;font-size:44px;color:var(--navy);line-height:1}
+  .trust small{color:var(--muted);font-size:14px}
+  section{padding:110px 0}
+  .sh{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+  .sh h2{font-size:54px;color:var(--navy)}
+  .sh p{color:var(--muted);font-size:17px}
+  .areas{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #e3ddcf;border-left:1px solid #e3ddcf}
+  .area{padding:40px 34px;border-right:1px solid #e3ddcf;border-bottom:1px solid #e3ddcf;background:#fff;transition:.25s}
+  .area:hover{background:var(--navy);color:#fff}
+  .area:hover p{color:#b9c2d3}
+  .area .n{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:22px;font-weight:700}
+  .area h3{font-size:30px;margin:14px 0 10px}
+  .area p{color:var(--muted);font-size:15px}
+  .area span{display:inline-block;margin-top:18px;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--gold)}
+  .team{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .person .ph{aspect-ratio:4/4.6;background:linear-gradient(170deg,#25395a,#0f1e33);position:relative;margin-bottom:20px;overflow:hidden}
+  .person .ph:after{content:"";position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);width:62%;aspect-ratio:1;border-radius:50% 50% 0 0;background:#30476b}
+  .person .ph:before{content:"";position:absolute;left:50%;top:22%;transform:translateX(-50%);width:30%;aspect-ratio:1;border-radius:50%;background:#3b5580;z-index:1}
+  .person h3{font-size:28px;color:var(--navy)}
+  .person small{color:var(--gold);font-weight:700;letter-spacing:.08em;font-size:12px;text-transform:uppercase}
+  .quote{background:var(--navy);color:#fff;text-align:center;padding:110px 0}
+  .quote blockquote{font-family:"Cormorant Garamond",serif;font-size:42px;font-style:italic;max-width:900px;margin:0 auto 26px;line-height:1.3}
+  .quote cite{color:var(--gold);font-style:normal;font-weight:600;letter-spacing:.1em;font-size:14px}
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+  .contact h2{font-size:54px;color:var(--navy);margin-bottom:20px}
+  .ci{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid #e3ddcf}
+  .ci i{font-style:normal;width:46px;height:46px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);flex-shrink:0}
+  .ci b{display:block;color:var(--navy)}
+  .ci span{color:var(--muted);font-size:15px}
+  footer{background:#0a1626;color:#7f8aa0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;padding:36px 28px}
+  @media(max-width:900px){.hgrid,.sh,.contact{grid-template-columns:1fr}.areas,.team{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.hero h1{font-size:48px}nav ul,.top{display:none}.hero:after{display:none}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>Mon–Fri 9:00–18:00 · Free 30-minute consultation</span><span>Business · Immigration · Litigation</span></div></div>
+<header class="hero">
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#">Hartwell &amp; Reyes<small>ATTORNEYS AT LAW</small></a>
+      <ul><li>Practice areas</li><li>Attorneys</li><li>Results</li><li>Insights</li><li>Contact</li></ul>
+      <a class="btn btn-gold" href="#contact">Book consultation</a>
+    </nav>
+    <div class="hgrid">
+      <div>
+        <div class="eyebrow">New York · Since 2004</div>
+        <h1>Counsel you can <em>trust</em> when it matters most.</h1>
+        <p>We help founders, families and growing companies navigate business law, immigration and disputes with clarity, strategy and genuine care.</p>
+        <div class="cta"><a class="btn btn-gold" href="#contact">Free consultation</a><a class="btn btn-out" href="#areas">Our practice areas</a></div>
+      </div>
+      <div class="form">
+        <h3>Request a consultation</h3>
+        <p>We'll get back to you within one business day.</p>
+        <div class="field">Full name</div>
+        <div class="field">Email address</div>
+        <div class="field">Practice area ▾</div>
+        <div class="field" style="height:90px">Briefly describe your situation</div>
+        <a class="btn" href="#">Send request →</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="trust"><div class="wrap">
+  <div><b>20+</b><small>Years of practice</small></div>
+  <div><b>2,400</b><small>Clients represented</small></div>
+  <div><b>$180M</b><small>Recovered for clients</small></div>
+  <div><b>98%</b><small>Client satisfaction</small></div>
+</div></div>
+
+<section id="areas"><div class="wrap">
+  <div class="sh"><h2>Practice areas</h2><p>Focused expertise across the matters that shape your business and your life. Every case is led by a senior partner.</p></div>
+  <div class="areas">
+    <div class="area"><div class="n">01</div><h3>Corporate &amp; Business</h3><p>Formation, contracts, fundraising, M&amp;A and ongoing general counsel.</p><span>LEARN MORE →</span></div>
+    <div class="area"><div class="n">02</div><h3>Immigration</h3><p>Work visas, green cards, investor visas and citizenship applications.</p><span>LEARN MORE →</span></div>
+    <div class="area"><div class="n">03</div><h3>Litigation</h3><p>Commercial disputes, arbitration and appeals in state and federal court.</p><span>LEARN MORE →</span></div>
+    <div class="area"><div class="n">04</div><h3>Real Estate</h3><p>Commercial leases, acquisitions, zoning and landlord-tenant matters.</p><span>LEARN MORE →</span></div>
+    <div class="area"><div class="n">05</div><h3>Employment</h3><p>Policies, agreements, compliance audits and workplace disputes.</p><span>LEARN MORE →</span></div>
+    <div class="area"><div class="n">06</div><h3>Intellectual Property</h3><p>Trademarks, licensing and protecting your brand and content.</p><span>LEARN MORE →</span></div>
+  </div>
+</div></section>
+
+<div class="quote"><div class="wrap">
+  <blockquote>“They treated our company's future like it was their own. Clear advice, fast answers and a result better than we hoped for.”</blockquote>
+  <cite>— CEO, NORTHLINE LOGISTICS</cite>
+</div></div>
+
+<section><div class="wrap">
+  <div class="sh"><h2>Meet the partners</h2><p>Seasoned attorneys who pick up the phone, explain things in plain English and fight for the outcome you need.</p></div>
+  <div class="team">
+    <div class="person"><div class="ph"></div><small>Founding Partner</small><h3>James Hartwell</h3></div>
+    <div class="person"><div class="ph"></div><small>Managing Partner</small><h3>Elena Reyes</h3></div>
+    <div class="person"><div class="ph"></div><small>Partner, Litigation</small><h3>Marcus Chen</h3></div>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap contact">
+  <div><div class="eyebrow">Get in touch</div><h2>Let's talk about your case.</h2><p style="color:var(--muted);font-size:17px">Your first 30-minute consultation is free and completely confidential.</p></div>
+  <div>
+    <div class="ci"><i>⌂</i><div><b>Office</b><span>Midtown Manhattan, New York</span></div></div>
+    <div class="ci"><i>◷</i><div><b>Hours</b><span>Monday – Friday, 9:00 – 18:00</span></div></div>
+    <div class="ci"><i>✓</i><div><b>First consultation</b><span>Free, 30 minutes, fully confidential</span></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Hartwell &amp; Reyes LLP. Attorney advertising.</span><span>Privacy · Disclaimer</span></div></footer>
+<a href="https://www.upwork.com/freelancers/~011d30ba4386bdbcf8" target="_blank" rel="noopener" style="position:fixed;right:16px;bottom:16px;z-index:9999;background:#14a800;color:#fff;font:600 13px/1.2 system-ui,sans-serif;padding:10px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.3);text-decoration:none">Design concept by Ziya C. &middot; Hire me on Upwork &rarr;</a>
+</body>
+</html>
